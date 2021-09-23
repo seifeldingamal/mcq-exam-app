@@ -1,0 +1,15 @@
+const Question = require('../models/Question');
+
+module.exports.questionsGet = async (req, res) => {
+    const questions = await Question.find({}).limit(5);
+    res.send(questions);
+}
+
+module.exports.questionPost = async (req, res) => {
+	const question = new Question({
+        text: req.body.question,
+	    choises: req.body.choises,
+    });
+	await question.save();
+	res.send(question);
+}
