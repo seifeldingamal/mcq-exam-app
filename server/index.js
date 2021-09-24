@@ -6,7 +6,7 @@ const path = require('path');
 const questions = require('./routes/questions');
 
 mongoose
-    .connect('mongodb://localhost:27017/Questions?retryWrites=true&w=majority', { 
+    .connect('mongodb+srv://admin:admin@main.llv7l.mongodb.net/Questions?retryWrites=true&w=majority', { 
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useCreateIndex: true,

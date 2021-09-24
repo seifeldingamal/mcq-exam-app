@@ -5,7 +5,7 @@ const schema = mongoose.Schema({
         type: String,
         required: true,
     },
-	choises: {
+	choices: {
         type: Array,
         required: true,
     }

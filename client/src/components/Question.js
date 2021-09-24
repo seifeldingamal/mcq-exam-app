@@ -74,7 +74,7 @@ class Question extends Component {
                     {
                         shuffled.map( (option, index) => {
                             return (
-                                <Radio key={index} value={option}>{option.choise}</Radio>
+                                <Radio key={index} value={option}>{option.choice}</Radio>
                             )
                         })
                     }
@@ -90,7 +90,7 @@ class Question extends Component {
 function mapStateToProps ({ questions, score }, { current }) {
     
     const question = questions[current]
-    let shuffled = question.choises.map((value) => ({ value, sort: Math.random() }))
+    let shuffled = question.choices.map((value) => ({ value, sort: Math.random() }))
         .sort((a, b) => a.sort - b.sort)
         .map(({ value }) => value)
 

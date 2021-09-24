@@ -7,8 +7,8 @@ module.exports.questionsGet = async (req, res) => {
 
 module.exports.questionPost = async (req, res) => {
 	const question = new Question({
-        text: req.body.question,
-	    choises: req.body.choises,
+        text: req.body.text,
+	    choices: req.body.choices,
     });
 	await question.save();
 	res.send(question);
