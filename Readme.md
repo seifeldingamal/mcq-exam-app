@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCQ App
 I was required to develop an application that allows students to enroll MCQ exams with tracing their scores.
 
