@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # MCQ App
 I was required to develop an application that allows students to enroll MCQ exams with tracing their scores.
 
@@ -21,6 +20,7 @@ In the project directory, you can run:
 
 ### `npm i`
 ### `npm run server`
+### `cd client && npm i` 
 ### `npm run client`
 
 Runs the app in the development mode.\
