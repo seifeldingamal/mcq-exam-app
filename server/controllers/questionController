@@ -1,7 +1,7 @@
 const Question = require('../models/Question');
 
 module.exports.questionsGet = async (req, res) => {
-    const questions = await Question.find({}).limit(5);
+    const questions = await Question.aggregate([{ $sample: { size: 5 } }]);
     res.send(questions);
 }
 
