@@ -6,10 +6,9 @@ const path = require('path');
 const questions = require('./routes/questions');
 
 mongoose
-    .connect('mongodb+srv://admin:admin@main.llv7l.mongodb.net/Questions?retryWrites=true&w=majority', { 
+    .connect('mongodb+srv://admin:admin@cluster0.xmwo0tu.mongodb.net/?retryWrites=true&w=majority', { 
         useNewUrlParser: true,
         useUnifiedTopology: true,
-        useCreateIndex: true,
     }).then(() => {
         const app = express();
 
@@ -17,7 +16,7 @@ mongoose
         app.use(bodyParser.json());
         app.use(cors());
 
-        app.use('/questions', questions);
+        app.use('/api/questions', questions);
 
         if (process.env.NODE_ENV === 'production') {
             app.use(express.static('client/build'));
